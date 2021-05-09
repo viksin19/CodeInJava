@@ -7,12 +7,12 @@ public class ArrayListExample {
         List<Employee> empList = new ArrayList<>();
 
         // Adding Employees in empList
-        empList.add(new Employee(10001, "Vikram", 25, 40000));
-        empList.add(new Employee(10002, "Jai", 24, 33000));
-        empList.add(new Employee(10003, "Vivek", 24, 50000));
-        empList.add(new Employee(10004, "Smriti", 23, 39000));
-        empList.add(new Employee(10005, "Anuj", 24, 33000));
-        empList.add(new Employee(10006, "Suraj", 24, 150000));
+        empList.add(new Employee(10001, "Ankit", 25, 40000));
+        empList.add(new Employee(10002, "Babbun", 24, 33000));
+        empList.add(new Employee(10003, "Uday", 24, 50000));
+        empList.add(new Employee(10004, "Sweety", 23, 39000));
+        empList.add(new Employee(10005, "Jon", 24, 33000));
+        empList.add(new Employee(10006, "Doe", 24, 150000));
 
         // Iterating over lIst using Stream().
         empList.stream().forEach(emp -> {
