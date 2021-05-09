@@ -30,11 +30,15 @@ public class LinkedListExample {
         // getting head element and it will remove the first element
         System.out.println(empLinkedList.poll().toString()); // return first Item and remove it from the list
         System.out.println(empLinkedList.pollLast().toString()); // returns last node and remove it from the list.
-
         System.out.println("Size after poll() :: " + empLinkedList.size() + "\n");
 
         // returns node using index
         System.out.println(empLinkedList.get(2));
+
+        empLinkedList.addFirst(new Employee(10001, "Natasha", 25, 40000));// Insert node at the starting
+        empLinkedList.addLast(new Employee(10006, "Thor", 24, 150000));// Insert Node in the last
+
+        System.out.println(empLinkedList.remove(2).toString()); // removes and return the object at specified Index
 
     }
 }
