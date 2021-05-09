@@ -5,6 +5,8 @@ public class ArrayListExample {
 
     public static void main(String[] args) {
         List<Employee> empList = new ArrayList<>();
+
+        // Adding Employees in empList
         empList.add(new Employee(10001, "Vikram", 25, 40000));
         empList.add(new Employee(10002, "Jai", 24, 33000));
         empList.add(new Employee(10003, "Vivek", 24, 50000));
@@ -12,26 +14,29 @@ public class ArrayListExample {
         empList.add(new Employee(10005, "Anuj", 24, 33000));
         empList.add(new Employee(10006, "Suraj", 24, 150000));
 
+        // Iterating over lIst using Stream().
         empList.stream().forEach(emp -> {
             System.out.println(
                     "_____________________________________________________________________________________________________");
             System.out.println(emp.toString());
         });
 
+        // Getting Employee From empList using Index ( object.get(Index))
         System.out.println("\n  Employee at index 3 :: " + empList.get(3).toString());
         System.out.println("\n  Employee at index 4 :: " + empList.get(4).toString());
         System.out.println("\n  Employee at index 1 :: " + empList.get(1).toString());
 
-        // Subset of the arrayList
+        // Subset of the arrayList subList(startIndex,LastIndex); LastIndex is exlusive
         System.out.println("\n Subset of Employe List :: ");
         empList.subList(0, 1).stream().forEach(emp -> {
             System.out.println(emp.toString());
         });
 
-        // Sorting empList on basis of salary in decreasing order.
+        // Sorting empList on basis of salary in decreasing order using comparator.
         empList.sort((a, b) -> {
             return b.getEmpSalary() - a.getEmpSalary();
         });
+        // Iterating using forEach to display employees after Sorting.
         empList.forEach(emp -> {
             System.out.println("Employee :: " + emp.getEmpName() + " || Salary :: " + emp.getEmpSalary());
         });
