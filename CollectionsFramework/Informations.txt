@@ -1,0 +1,11 @@
+
+Important interfaces:
+
+1. Iterable :- This is the parent interface which is extend by Collection interface. 
+               It allows you to iterate over list,Set,queues via iterator or forEach.
+
+2. Collection :- This is the main interface which provide the common functionality (add, addAll, remove etc).
+                 This interface is extended by List, Set, Queue interfaces.
+
+
+
