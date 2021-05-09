@@ -40,5 +40,21 @@ public class ArrayListExample {
         empList.forEach(emp -> {
             System.out.println("Employee :: " + emp.getEmpName() + " || Salary :: " + emp.getEmpSalary());
         });
+
+        // Adding from one list to other list
+        List<Employee> tempList = new ArrayList<>();
+        tempList.addAll(empList);
+
+        tempList.remove(2); // Removing Employee from empList using index;
+        tempList.remove(new Employee(10001, "Vikram", 25, 40000)); // Removing Employee Using
+        tempList.removeIf(emp -> {
+            return emp.getEmpSalary() == 33000;
+        }); // Remove based on predicate
+
+        System.out.println("After removing elements from TempList :: ");
+        tempList.forEach(emp -> {
+            System.out.println(emp.toString());
+        });
+
     }
 }
